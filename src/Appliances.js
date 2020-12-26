@@ -1,49 +1,36 @@
-import React from 'react'
-import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap';
-import Carousel from 'react-bootstrap/Carousel'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { Link } from "react-router-dom"
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import IconButton from '@material-ui/core/IconButton';
 
-function Appliances() {
-    return (
-        <div>
-        <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://image.shutterstock.com/image-photo/set-modern-appliances-on-reflective-260nw-1413515594.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Third slide"
-          />
-      
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-      
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-        </div>
-    )
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: theme.spacing(149),
+  },
+}));
+
+export default function Appliances() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="fixed">
+        <Toolbar variant="dense">
+          <Typography variant="h6" color="inherit">
+          <Link to="/" style={{ textDecoration: 'none' , color: 'white'}}> Precess </Link>
+          </Typography>
+          <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
+            <ShoppingCartIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
-
-export default Appliances
