@@ -1,6 +1,7 @@
-#Required packages to be installed
+# Required packages to be installed
 
 1. Material UI Core
+
 npm install @material-ui/core
 
 2. Material UI Icons
