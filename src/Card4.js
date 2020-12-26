@@ -35,8 +35,7 @@ export default function ImgMediaCard4() {
           Cosmetics
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+      Got wrong shade of foundation or some product isn't suiting you or just got lipshade you alredy own, give it away at slashed price.
           </Typography>
         </CardContent>
       </CardActionArea>
