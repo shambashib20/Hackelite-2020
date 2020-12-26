@@ -21,13 +21,13 @@ export default function Appliances() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" style={{ marginTop: '-2rem' }}>
         <Toolbar variant="dense">
           <Typography variant="h6" color="inherit">
           <Link to="/" style={{ textDecoration: 'none' , color: 'white'}}> Precess </Link>
           </Typography>
           <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
-            <ShoppingCartIcon />
+          <Link to="/shoppingcart" style={{ textDecoration: 'none' , color: 'white'}}><ShoppingCartIcon /></Link>
           </IconButton>
         </Toolbar>
       </AppBar>

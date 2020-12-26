@@ -8,6 +8,7 @@ import Beverages from './Beverages'
 import Appliances from './Appliances'
 import Cosmetics from './Cosmetics'
 import Stationary from './Stationary'
+import ShoppingCart from './ShoppingCart'
 import Error from './Error'
 import { Switch, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
       <Route exact path ="/appliances" component ={Appliances} />
       <Route exact path ="/cosmetics" component ={Cosmetics} />
       <Route exact path ="/stationary" component ={Stationary} />
+      <Route exact path ="/shoppingcart" component ={ShoppingCart} />
       <Route component={Error} />
     </Switch>
     
