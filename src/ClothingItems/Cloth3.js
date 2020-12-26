@@ -17,6 +17,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    marginRight: 316,
   },
   media: {
     height: 0,
