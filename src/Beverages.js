@@ -6,6 +6,10 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import IconButton from '@material-ui/core/IconButton';
+import Beverages1 from "./BeveragesItems/Beverages1"
+import Beverages2 from "./BeveragesItems/Beverages2"
+import Beverages3 from "./BeveragesItems/Beverages3"
+import Beverages4 from "./BeveragesItems/Beverages4"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,6 +35,16 @@ export default function Beverages() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <br />  <br />  <br /> 
+      <div className="clothes-1">
+      <Beverages1 /> {' '} {' '}
+      <Beverages2 />
+      </div>
+      <br /> <br />
+      <div className="clothes-2">
+      <Beverages3  />
+      <Beverages4  />
+      </div>
     </div>
   );
 }
