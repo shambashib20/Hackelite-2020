@@ -35,8 +35,7 @@ export default function ImgMediaCard3() {
           Appliances
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+           Want to get an update in current stack of appliances but running low on budget, go grab yourself one at lowered price.
           </Typography>
         </CardContent>
       </CardActionArea>

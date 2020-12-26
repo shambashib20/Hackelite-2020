@@ -35,8 +35,7 @@ export default function ImgMediaCard5() {
           Stationary
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+         Have a canvas you want to give alway or your brush set you once adored? Provided it to some one who want to provide a new life to them.
           </Typography>
         </CardContent>
       </CardActionArea>

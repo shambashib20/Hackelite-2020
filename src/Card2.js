@@ -35,8 +35,7 @@ export default function ImgMediaCard2() {
           Beverages
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+          Have a coffee box that you don't want to drink anymore or some protien drink you dont like the taste of? put it up for sale someone might go gala over it for slashed price.
           </Typography>
         </CardContent>
       </CardActionArea>
