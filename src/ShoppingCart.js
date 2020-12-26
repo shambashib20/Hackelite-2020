@@ -16,7 +16,7 @@ export default function ShoppingCart() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" style={{ marginTop: '-2rem' }}>
         <Toolbar variant="dense">
           <Typography variant="h6" color="inherit">
           <Link to="/" style={{ textDecoration: 'none' , color: 'white'}}> Precess </Link>
