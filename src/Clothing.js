@@ -37,8 +37,7 @@ export default function Clothing() {
       </AppBar>
       <br />  <br />  <br /> 
       <div className="clothes-1">
-      <Cloth1 /> {' '} {' '}
-      <Cloth2 />
+      <Cloth1 />     <Cloth2 />
       </div>
       <br /> <br />
       <div className="clothes-2">
