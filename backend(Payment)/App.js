@@ -1,40 +1,71 @@
 import React from 'react'
 import './App.css'
 
-function loadRazorpay() {
-    function showRazorpay() {
+function loadScript(src) {
+    return new Promise((resolve => {
+
         const script = document.createElement('script');
-        script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+        script.src = 
         document.body.appendChild(script)
-        script.onload = display
+        script.onload = () => {
+            resolve(true);
+        }
+        script.oneerror = () => {
+            resolve(false);
+        }
+    })
+}
+const __DEV__ = 
+
+if(document.domain === 'localhost') {
+    //development
+
+} else {
+    //production
+    //production
+}
+
+
+
+function App() {
+    async function displayRazorpay() {
+        const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+
+        if(!res) {
+            alert('Razorpay has failed to load ')
+        }
         var options = {
-            "key": "YOUR_KEY_ID",
-            "amount": "50000",
-            "currency": "INR",
-            "name": "Acme Cor",
-            "description": "Test Transaction",
-            "image": "logo.jpg",
-            "order_id": "order_9A33XWu170gUtm",
-            "handler": function (response){
+            key: "rzp_test_DQ41K5VHq5clHl",
+            amount: "50000",
+            currency: "INR",
+            name: "Acme Cor",
+            description: "Test Transaction",
+            image: "logo.jpg",
+            order_id: "order_9A33XWu170gUtm",
+            handler: function (response){
                 alert(response.razorpay_payment_id);
                 alert(response.response_order_id);
                 alert(response.razorpay_signature)
             },
-            "prefill": {
+            prefill: {
                 "name": "Shambashib Majumdar",
                 "email": "shambashibmajumdar2000@gmail.com",
-                "contact": "99999999999"
+                "contact": "8481914369"
             },
-            "notes": {
+            notes: {
                 "address": "Razorpay Corporate Office"
             },
-            "theme": {
+            theme: {
                 "color": "#F37524"
             }
         };
         var rzp1= new Razorpay(options);
             
+ 
     }
+    
+    
+    
     return (
         <div className="App">
             <header>
