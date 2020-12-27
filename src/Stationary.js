@@ -1,4 +1,5 @@
-import React from 'react';
+import React , { useState } from 'react';
+import { useStateValue } from './StateProvider'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -22,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Stationary() {
+  const [{basket}, dispatch] = useStateValue();
   const classes = useStyles();
 
   return (
@@ -33,6 +35,7 @@ export default function Stationary() {
           </Typography>
           <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
           <Link to="/shoppingcart" style={{ textDecoration: 'none' , color: 'white'}}><ShoppingCartIcon /></Link>
+          <span>{basket?.length}</span>
           </IconButton>
         </Toolbar>
       </AppBar>
