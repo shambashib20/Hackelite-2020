@@ -11,7 +11,7 @@ function loadRazorpay() {
             "key": "YOUR_KEY_ID",
             "amount": "50000",
             "currency": "INR",
-            "name": "Acme Corp",
+            "name": "Acme Cor",
             "description": "Test Transaction",
             "image": "https://example.com/your_logo",
             "order_id": "order_9A33XWu170gUtm",
