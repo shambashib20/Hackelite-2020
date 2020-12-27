@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { useStateValue } from '../StateProvider'
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -8,19 +9,22 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    minWidth:300,
     maxWidth: 345,
     marginRight: 316,
   },
   media: {
-    height: 299,
+    height: 0,
     paddingTop: '56.25%', // 16:9
   },
   expand: {
@@ -38,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Cloth1() {
+export default function Cloth1( { brand, used, price, additional }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -46,32 +50,67 @@ export default function Cloth1() {
     setExpanded(!expanded);
   };
 
+  // const [products] = useState([
+  //   {
+  //     image : 'https://i.imgur.com/5BvZw1G.jpg',
+  //     Brand: 'H &M',
+  //     Size: 'M-XL',
+  //     Used: 'yes' ,
+  //     Price: '300' ,
+  //     Additional : 'None', 
+  //   },
+  // ])
+
+  // const [cart, setCart] = useState([]);
+
+  // const addToCart = (product) => {
+  //     setCart([...cart, product]);
+  // };
+
+  // const [page, setPage] = useState([]);
+
+  const [{basket}, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+      dispatch ({
+        type: "ADD_TO_BASKET",
+        item: {
+          brand:brand,
+            used: used,
+             price: price,
+              additional : additional,
+            
+        }
+      })
+  };
+
   return (
     <Card className={classes.root}>
+   
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-O
+            H
           </Avatar>
         }
         
-        title="Faber Castle Oil colors"
-        subheader="ID - #488883"
+        title="Electronics"
+        subheader="ID - #4756433"
       />
       <CardMedia
         className={classes.media}
         image="https://i.imgur.com/5dJwjNJ.jpg"
-        title="oil colors"
+        title="pink top"
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae deleniti blanditiis maxime totam voluptates repudiandae? Eveniet, sapiente quos ipsum magnam molestias possimus vero enim alias.
-        </Typography>
-      </CardContent>
+  
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <ShoppingCartIcon />
-        </IconButton>
+      <Button onClick={addToBasket}><ShoppingCartIcon /></Button> 
+      <Button ><PhoneInTalkIcon /></Button>
+
+        {/* <IconButton aria-label="add to favorites" >    */}
+        {/* onClick={() => addToCart(product)} */}
+          {/* <ShoppingCartIcon />
+        </IconButton> */}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -86,16 +125,27 @@ O
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography>
-          <h3>
-          Brand: fabric castle <br />
+            <h3>
+            Brand: fabric castle <br />
 Product name: Oil colors <br />
 Used: yes <br />
 Price: 200 <br />
 Additional Info: original price 600 <br />
-            </h3>
+              </h3>
+            
+          {/* {products.map((product, idx) => (
+            <div key={idx}>
+           <h3>{product.Brand}</h3>,
+            <h3>{product.Size}</h3>,23w
+            <h3>{product.Used}</h3>,
+            <h3>{product.Price}</h3>,
+            <h3>{product.Additional}</h3>
+            </div>
+            ))} */}
           </Typography>
         </CardContent>
       </Collapse>
+     
     </Card>
   );
 }
