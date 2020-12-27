@@ -13,7 +13,7 @@ function loadRazorpay() {
             "currency": "INR",
             "name": "Acme Cor",
             "description": "Test Transaction",
-            "image": "https://example.com/your_logo",
+            "image": "logo.jpg",
             "order_id": "order_9A33XWu170gUtm",
             "handler": function (response){
                 alert(response.razorpay_payment_id);
@@ -21,7 +21,7 @@ function loadRazorpay() {
                 alert(response.razorpay_signature)
             },
             "prefill": {
-                "name": "Gaurav Kumar",
+                "name": "Shambashib Majumdar",
                 "email": "shambashibmajumdar2000@gmail.com",
                 "contact": "99999999999"
             },
@@ -32,8 +32,22 @@ function loadRazorpay() {
                 "color": "#F37524"
             }
         };
-
+        var rzp1= new Razorpay(options);
             
-        }
     }
+    return (
+        <div className="App">
+            <header>
+            <img src={logo} classname="App-logo" alt="logo" />
+            <a 
+            className="App-link"
+            onClick={showRazorpay}
+            target="_blank"
+            rel="noopener no refferer">
+                Donate $5
+            </a>
+            </header>
+
+        </div>
+    )
 }
