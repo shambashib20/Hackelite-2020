@@ -1,9 +1,10 @@
-import React from 'react';
+import React , { useState } from 'react';
+import { useStateValue } from './StateProvider'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import IconButton from '@material-ui/core/IconButton';
 import Cosmetics1 from "./CosmeticsItems/Cosmetics1"
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Cosmetics() {
+  const [{basket}, dispatch] = useStateValue();
   const classes = useStyles();
 
   return (
@@ -32,6 +34,7 @@ export default function Cosmetics() {
           </Typography>
           <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
           <Link to="/shoppingcart" style={{ textDecoration: 'none' , color: 'white'}}> <ShoppingCartIcon />    </Link>
+          <span>{basket?.length}</span>
           </IconButton>
         </Toolbar>
       </AppBar>
