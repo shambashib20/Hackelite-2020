@@ -35,7 +35,7 @@ export default function ImgMediaCard4() {
           Cosmetics
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-      Got wrong shade of foundation or some product isn't suiting you or just got lipshade you alredy own, give it away at slashed price.
+          Got wrong shade of foundation or some product isn't suiting you or just got lipshade you alredy own, give it away at slashed price.
           </Typography>
         </CardContent>
       </CardActionArea>

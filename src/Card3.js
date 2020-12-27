@@ -35,7 +35,7 @@ export default function ImgMediaCard3() {
           Appliances
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-           Want to get an update in current stack of appliances but running low on budget, go grab yourself one at lowered price.
+          Want to get an update in current stack of appliances but running low on budget, go grab yourself one at lowered price.
           </Typography>
         </CardContent>
       </CardActionArea>

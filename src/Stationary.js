@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import IconButton from '@material-ui/core/IconButton';
-import Carousel from 'react-bootstrap/Carousel'
+// import Carousel from 'react-bootstrap/Carousel'
 import Stationary1 from "./StationaryItems/Stationary1"
 import Stationary2 from "./StationaryItems/Stationary2"
 import Stationary3 from "./StationaryItems/Stationary3"

@@ -37,7 +37,7 @@ export default function ImgMediaCard1() {
             
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-           Pre-loved things hold two benifits, you get things at lowered price and there's an that you'll rock the outfit.
+          Pre-loved things hold two benifits, you get things at lowered price and there's an that you'll rock the outfit.
           </Typography>
         </CardContent>
       </CardActionArea>

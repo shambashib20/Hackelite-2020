@@ -35,7 +35,7 @@ export default function ImgMediaCard5() {
           Stationary
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-         Have a canvas you want to give alway or your brush set you once adored? Provided it to some one who want to provide a new life to them.
+          Have a canvas you want to give alway or your brush set you once adored? Provided it to some one who want to provide a new life to them.
           </Typography>
         </CardContent>
       </CardActionArea>

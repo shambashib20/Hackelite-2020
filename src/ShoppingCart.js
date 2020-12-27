@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom"
+import Carousel from 'react-bootstrap/Carousel'
 
 const useStyles = makeStyles((theme) => ({
   root: {
