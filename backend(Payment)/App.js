@@ -5,7 +5,7 @@ function loadScript(src) {
     return new Promise((resolve => {
 
         const script = document.createElement('script');
-        script.src = 
+        
         document.body.appendChild(script)
         script.onload = () => {
             resolve(true);
@@ -14,25 +14,25 @@ function loadScript(src) {
             resolve(false);
         }
     })
-}
-const __DEV__ = 
+)}
 
-if(document.domain === 'localhost') {
-    //development
 
-} else {
-    //production
-    //production
-}
+const __DEV__ = document.domain === 'localhost'
+
+
 
 
 
 function App() {
-    async function displayRazorpay() {
+
+
+    function displayRazorpay() {
+    
         const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
 
         if(!res) {
-            alert('Razorpay has failed to load ')
+            alert('Razorpay has failed to load! Check your connection please! ')
+            return
         }
         var options = {
             key: "rzp_test_DQ41K5VHq5clHl",
@@ -68,17 +68,10 @@ function App() {
     
     return (
         <div className="App">
-            <header>
-            <img src={logo} classname="App-logo" alt="logo" />
-            <a 
-            className="App-link"
-            onClick={showRazorpay}
-            target="_blank"
-            rel="noopener no refferer">
-                Donate $5
-            </a>
+            <header className="App-header">
+                <img src={logo} classname="App-logo" alt="logo" />
+                <a className="App-link" onClick={displayRazorpay} target="_blank" rel="noopener no refferer">Donate $5</a>
             </header>
-
         </div>
     )
 }
